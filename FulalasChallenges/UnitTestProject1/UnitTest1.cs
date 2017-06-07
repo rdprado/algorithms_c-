@@ -11,7 +11,7 @@ namespace FullalasChallenges1Test
     [TestClass]
     public class UnitTest1
     {
-        Problem1Strategy strategy = new Problem1WorkingTry1();
+        Problem1Strategy strategy = new Problem1WorkingTry2();
 
         [TestMethod]
         public void TestMethod1()
