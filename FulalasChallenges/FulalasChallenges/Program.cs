@@ -30,12 +30,12 @@ namespace FulalasChallenges
         public int Count(LinkedList<int> linkedList)
         {
             int currentListIndex = 0;
-            bool found = false;
+            bool foundStart = false;
 
             for (var node = linkedList.First; node.Value != -1; node = node.Next, currentListIndex++)
-                if (!found && node.Value == currentListIndex + 1)
+                if (!foundStart && node.Value == currentListIndex + 1)
                 {
-                    found = true;
+                    foundStart = true;
                     currentListIndex = 1;
                 }
 
