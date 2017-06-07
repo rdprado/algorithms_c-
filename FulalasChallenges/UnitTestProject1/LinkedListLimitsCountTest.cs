@@ -9,9 +9,9 @@ using FulalasChallenges;
 namespace FullalasChallenge1Test
 {
     [TestClass]
-    public class UnitTest1
+    public class LinkedListLimitsCountTest
     {
-        Problem1Strategy strategy = new Problem1WorkingTry3();
+        LimitsCountStrategy strategy = new Problem1WorkingTry3();
 
         [TestMethod]
         public void TestMethod1()
