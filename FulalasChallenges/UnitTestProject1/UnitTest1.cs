@@ -11,7 +11,7 @@ namespace FullalasChallenges1Test
     [TestClass]
     public class UnitTest1
     {
-        Problem1Strategy strategy = new Problem1WorkingTry2();
+        Problem1Strategy strategy = new Problem1WorkingTry3();
 
         [TestMethod]
         public void TestMethod1()
@@ -78,6 +78,15 @@ namespace FullalasChallenges1Test
 
         [TestMethod]
         public void TestMethod8()
+        {
+            int[] listValuestricky1 = { 10, 400, 3, 3, -4, -1, 500, 3 }; // 4
+            var linkedList = new LinkedList<int>(listValuestricky1);
+            var count = strategy.Count(linkedList);
+            Assert.AreEqual(4, count);
+        }
+
+        [TestMethod]
+        public void TestMethod9()
         {
             int[] listValuestricky2 = { 10, 400, 3, 90, -4, 6, 500, 3, -1 }; // 7 
             var linkedList = new LinkedList<int>(listValuestricky2);

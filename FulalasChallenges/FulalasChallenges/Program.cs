@@ -7,6 +7,8 @@ namespace FulalasChallenges
     {
         static void Main(string[] args)
         {
+            // just an example, run tests!
+
             int[] listValuestricky2 = { 10, 400, 3, 90, -4, 6, 500, 3, -1 }; // 7 
 
             var strategy = new Problem1WorkingTry2();
@@ -23,16 +25,33 @@ namespace FulalasChallenges
         int Count(LinkedList<int> linkedList);
     }
 
+    public class Problem1WorkingTry3 : Problem1Strategy
+    {
+        public int Count(LinkedList<int> linkedList)
+        {
+            int currentListIndex = 0;
+            bool found = false;
+
+            for (var node = linkedList.First; node.Value != -1; node = node.Next, currentListIndex++)
+                if (!found && node.Value == currentListIndex + 1)
+                {
+                    found = true;
+                    currentListIndex = 1;
+                }
+
+            return currentListIndex;
+        }
+    }
+
     public class Problem1WorkingTry2 : Problem1Strategy
     {
         public int Count(LinkedList<int> linkedList)
         {
-            var listNode = linkedList.First;
             int startingIndex = -1;
             int currentListIndex = 0;
 
             for (var node = linkedList.First; node.Value != -1; node = node.Next, currentListIndex++)
-                if (startingIndex == -1 && listNode.Value == currentListIndex + 1)
+                if (startingIndex == -1 && node.Value == currentListIndex + 1)
                     startingIndex = currentListIndex;
 
             return currentListIndex - startingIndex + 1;
