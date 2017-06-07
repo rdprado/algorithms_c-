@@ -6,7 +6,7 @@ using FulalasChallenges;
 // Contar quantos elementos há numa lista encadeada dado que o índice 0 tem como valor o índice para o próximo elemento,
 // e no caso desse valor ser -1 significa que a lista acabou. Ex.: no array [1, 4, -1, 3, 2, 8] o total de elementos é 3..
 
-namespace FullalasChallenges1Test
+namespace FullalasChallenge1Test
 {
     [TestClass]
     public class UnitTest1
